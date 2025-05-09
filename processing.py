@@ -4,8 +4,8 @@ import requests
 import torch
 
 # Load an image (use your own file or URL)
-img_path = ""
-image = Image.open(requests.get(img_url, stream=True).raw).convert('RGB')
+img_path = "https://example.com/path/to/your/image.jpg"
+image = Image.open(requests.get(img_path, stream=True).raw).convert('RGB')
 
 # Load BLIP processor and model
 processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
