@@ -4,7 +4,7 @@ import requests
 import torch
 
 # Load an image (use your own file or URL)
-img_path = "https://example.com/path/to/your/image.jpg"
+img_path = "../images/sample.jpg"  # Replace with your image path or URL
 image = Image.open(requests.get(img_path, stream=True).raw).convert('RGB')
 
 # Load BLIP processor and model
